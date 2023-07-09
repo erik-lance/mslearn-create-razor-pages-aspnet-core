@@ -35,5 +35,13 @@ namespace ContosoPizza.Pages
 
             return RedirectToAction("Get");
         }
+
+        // This method is called when the user clicks the Delete button on a pizza.
+        public IActionResult OnPostDelete(int id)
+        {
+            _service.DeletePizza(id);
+
+            return RedirectToAction("Get");
+        }
     }
 }
